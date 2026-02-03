@@ -6,6 +6,7 @@ package topic
 import (
 	"bytes"
 	"fmt"
+
 	"github.com/XiaoMi/talos-sdk-golang/thrift/authorization"
 	"github.com/XiaoMi/talos-sdk-golang/thrift/common"
 	"github.com/XiaoMi/talos-sdk-golang/thrift/quota"
@@ -427,8 +428,9 @@ func (p *TopicAndPartition) String() string {
 }
 
 type TopicOwnerInfo struct {
-	ChargeId  *string `thrift:"chargeId,1" json:"chargeId"`
-	OwnerName *string `thrift:"ownerName,2" json:"ownerName"`
+	ChargeId  *string `thrift:"chargeId,1" json:"chargeId,omitempty"`
+	OwnerName *string `thrift:"ownerName,2" json:"ownerName,omitempty"`
+	IamTreeId *string `thrift:"iamTreeId,3" json:"iamTreeId,omitempty"`
 }
 
 func NewTopicOwnerInfo() *TopicOwnerInfo {
@@ -452,6 +454,16 @@ func (p *TopicOwnerInfo) GetOwnerName() string {
 	}
 	return *p.OwnerName
 }
+
+var TopicOwnerInfo_IamTreeId_DEFAULT string
+
+func (p *TopicOwnerInfo) GetIamTreeId() string {
+	if !p.IsSetIamTreeId() {
+		return TopicOwnerInfo_IamTreeId_DEFAULT
+	}
+	return *p.IamTreeId
+}
+
 func (p *TopicOwnerInfo) IsSetChargeId() bool {
 	return p.ChargeId != nil
 }
@@ -460,10 +472,15 @@ func (p *TopicOwnerInfo) IsSetOwnerName() bool {
 	return p.OwnerName != nil
 }
 
+func (p *TopicOwnerInfo) IsSetIamTreeId() bool {
+	return p.IamTreeId != nil
+}
+
 func (p *TopicOwnerInfo) Read(iprot thrift.TProtocol) error {
 	if _, err := iprot.ReadStructBegin(); err != nil {
 		return fmt.Errorf("%T read error: %s", p, err)
 	}
+
 	for {
 		_, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if err != nil {
@@ -479,6 +496,10 @@ func (p *TopicOwnerInfo) Read(iprot thrift.TProtocol) error {
 			}
 		case 2:
 			if err := p.ReadField2(iprot); err != nil {
+				return err
+			}
+		case 3:
+			if err := p.ReadField3(iprot); err != nil {
 				return err
 			}
 		default:
@@ -514,6 +535,15 @@ func (p *TopicOwnerInfo) ReadField2(iprot thrift.TProtocol) error {
 	return nil
 }
 
+func (p *TopicOwnerInfo) ReadField3(iprot thrift.TProtocol) error {
+	if v, err := iprot.ReadString(); err != nil {
+		return fmt.Errorf("error reading field 3: %s", err)
+	} else {
+		p.IamTreeId = &v
+	}
+	return nil
+}
+
 func (p *TopicOwnerInfo) Write(oprot thrift.TProtocol) error {
 	if err := oprot.WriteStructBegin("TopicOwnerInfo"); err != nil {
 		return fmt.Errorf("%T write struct begin error: %s", p, err)
@@ -522,6 +552,9 @@ func (p *TopicOwnerInfo) Write(oprot thrift.TProtocol) error {
 		return err
 	}
 	if err := p.writeField2(oprot); err != nil {
+		return err
+	}
+	if err := p.writeField3(oprot); err != nil {
 		return err
 	}
 	if err := oprot.WriteFieldStop(); err != nil {
@@ -558,6 +591,21 @@ func (p *TopicOwnerInfo) writeField2(oprot thrift.TProtocol) (err error) {
 		}
 		if err := oprot.WriteFieldEnd(); err != nil {
 			return fmt.Errorf("%T write field end error 2:ownerName: %s", p, err)
+		}
+	}
+	return err
+}
+
+func (p *TopicOwnerInfo) writeField3(oprot thrift.TProtocol) (err error) {
+	if p.IsSetIamTreeId() {
+		if err := oprot.WriteFieldBegin("iamTreeId", thrift.STRING, 3); err != nil {
+			return fmt.Errorf("%T write field begin error 3:iamTreeId: %s", p, err)
+		}
+		if err := oprot.WriteString(string(*p.IamTreeId)); err != nil {
+			return fmt.Errorf("%T.iamTreeId (3) field write error: %s", p, err)
+		}
+		if err := oprot.WriteFieldEnd(); err != nil {
+			return fmt.Errorf("%T write field end error 3:iamTreeId: %s", p, err)
 		}
 	}
 	return err
