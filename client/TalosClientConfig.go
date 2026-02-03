@@ -9,7 +9,7 @@ package client
 import (
 	"strconv"
 
-	"github.com/XiaoMi/talos-sdk-golang/utils"
+	"github.com/liooooo29/talos-sdk-golang/utils"
 )
 
 type TalosClientConfig struct {

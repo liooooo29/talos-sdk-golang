@@ -10,11 +10,11 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/XiaoMi/talos-sdk-golang/client"
-	"github.com/XiaoMi/talos-sdk-golang/thrift/consumer"
-	"github.com/XiaoMi/talos-sdk-golang/thrift/message"
-	"github.com/XiaoMi/talos-sdk-golang/thrift/topic"
-	"github.com/XiaoMi/talos-sdk-golang/utils"
+	"github.com/liooooo29/talos-sdk-golang/client"
+	"github.com/liooooo29/talos-sdk-golang/thrift/consumer"
+	"github.com/liooooo29/talos-sdk-golang/thrift/message"
+	"github.com/liooooo29/talos-sdk-golang/thrift/topic"
+	"github.com/liooooo29/talos-sdk-golang/utils"
 	"github.com/sirupsen/logrus"
 )
 

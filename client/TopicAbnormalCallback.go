@@ -7,7 +7,7 @@
 package client
 
 import (
-	"github.com/XiaoMi/talos-sdk-golang/thrift/topic"
+	"github.com/liooooo29/talos-sdk-golang/thrift/topic"
 )
 
 type TopicAbnormalCallback interface {

@@ -14,7 +14,7 @@ import (
 
 	"talos-sdk-golang/producer"
 
-	"github.com/XiaoMi/talos-sdk-golang/thrift/thrift"
+	"github.com/liooooo29/talos-sdk-golang/thrift/thrift"
 	"github.com/stretchr/testify/assert"
 )
 

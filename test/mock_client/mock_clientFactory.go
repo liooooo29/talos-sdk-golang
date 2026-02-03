@@ -7,11 +7,11 @@ package mock_client
 import (
 	reflect "reflect"
 
-	consumer "github.com/XiaoMi/talos-sdk-golang/thrift/consumer"
-	message "github.com/XiaoMi/talos-sdk-golang/thrift/message"
-	metric "github.com/XiaoMi/talos-sdk-golang/thrift/metric"
-	quota "github.com/XiaoMi/talos-sdk-golang/thrift/quota"
-	topic "github.com/XiaoMi/talos-sdk-golang/thrift/topic"
+	consumer "github.com/liooooo29/talos-sdk-golang/thrift/consumer"
+	message "github.com/liooooo29/talos-sdk-golang/thrift/message"
+	metric "github.com/liooooo29/talos-sdk-golang/thrift/metric"
+	quota "github.com/liooooo29/talos-sdk-golang/thrift/quota"
+	topic "github.com/liooooo29/talos-sdk-golang/thrift/topic"
 	gomock "github.com/golang/mock/gomock"
 )
 

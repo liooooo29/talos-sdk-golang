@@ -14,12 +14,12 @@ import (
 
 	"sync/atomic"
 
-	"github.com/XiaoMi/talos-sdk-golang/admin"
-	"github.com/XiaoMi/talos-sdk-golang/client"
-	"github.com/XiaoMi/talos-sdk-golang/thrift/auth"
-	"github.com/XiaoMi/talos-sdk-golang/thrift/message"
-	"github.com/XiaoMi/talos-sdk-golang/thrift/topic"
-	"github.com/XiaoMi/talos-sdk-golang/utils"
+	"github.com/liooooo29/talos-sdk-golang/admin"
+	"github.com/liooooo29/talos-sdk-golang/client"
+	"github.com/liooooo29/talos-sdk-golang/thrift/auth"
+	"github.com/liooooo29/talos-sdk-golang/thrift/message"
+	"github.com/liooooo29/talos-sdk-golang/thrift/topic"
+	"github.com/liooooo29/talos-sdk-golang/utils"
 	"github.com/sirupsen/logrus"
 )
 

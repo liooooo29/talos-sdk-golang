@@ -14,11 +14,11 @@ import (
 
 	"reflect"
 
-	"github.com/XiaoMi/talos-sdk-golang/thrift/message"
+	"github.com/liooooo29/talos-sdk-golang/thrift/message"
 
-	"github.com/XiaoMi/talos-sdk-golang/utils"
+	"github.com/liooooo29/talos-sdk-golang/utils"
 
-	"github.com/XiaoMi/talos-sdk-golang/client/serialization"
+	"github.com/liooooo29/talos-sdk-golang/client/serialization"
 
 	"github.com/stretchr/testify/assert"
 )

@@ -9,14 +9,14 @@ package client
 import (
 	"testing"
 
-	"github.com/XiaoMi/talos-sdk-golang/thrift/message"
-	"github.com/XiaoMi/talos-sdk-golang/thrift/topic"
+	"github.com/liooooo29/talos-sdk-golang/thrift/message"
+	"github.com/liooooo29/talos-sdk-golang/thrift/topic"
 
-	"github.com/XiaoMi/talos-sdk-golang/utils"
+	"github.com/liooooo29/talos-sdk-golang/utils"
 
-	"github.com/XiaoMi/talos-sdk-golang/client"
-	"github.com/XiaoMi/talos-sdk-golang/test/mock_client"
-	"github.com/XiaoMi/talos-sdk-golang/test/mock_message"
+	"github.com/liooooo29/talos-sdk-golang/client"
+	"github.com/liooooo29/talos-sdk-golang/test/mock_client"
+	"github.com/liooooo29/talos-sdk-golang/test/mock_message"
 
 	"github.com/golang/mock/gomock"
 	log4go "github.com/sirupsen/logrus"

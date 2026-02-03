@@ -7,7 +7,7 @@ package mock_producer
 import (
 	reflect "reflect"
 
-	producer "github.com/XiaoMi/talos-sdk-golang/producer"
+	producer "github.com/liooooo29/talos-sdk-golang/producer"
 	gomock "github.com/golang/mock/gomock"
 )
 

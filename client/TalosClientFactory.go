@@ -13,16 +13,16 @@ import (
 	"runtime"
 	"time"
 
-	"github.com/XiaoMi/talos-sdk-golang/thrift/auth"
-	"github.com/XiaoMi/talos-sdk-golang/thrift/common"
-	"github.com/XiaoMi/talos-sdk-golang/thrift/consumer"
-	"github.com/XiaoMi/talos-sdk-golang/thrift/message"
-	"github.com/XiaoMi/talos-sdk-golang/thrift/quota"
-	"github.com/XiaoMi/talos-sdk-golang/thrift/topic"
-	"github.com/XiaoMi/talos-sdk-golang/utils"
+	"github.com/liooooo29/talos-sdk-golang/thrift/auth"
+	"github.com/liooooo29/talos-sdk-golang/thrift/common"
+	"github.com/liooooo29/talos-sdk-golang/thrift/consumer"
+	"github.com/liooooo29/talos-sdk-golang/thrift/message"
+	"github.com/liooooo29/talos-sdk-golang/thrift/quota"
+	"github.com/liooooo29/talos-sdk-golang/thrift/topic"
+	"github.com/liooooo29/talos-sdk-golang/utils"
 
-	"github.com/XiaoMi/talos-sdk-golang/thrift/metric"
-	"github.com/XiaoMi/talos-sdk-golang/thrift/thrift"
+	"github.com/liooooo29/talos-sdk-golang/thrift/metric"
+	"github.com/liooooo29/talos-sdk-golang/thrift/thrift"
 )
 
 // interface for mock

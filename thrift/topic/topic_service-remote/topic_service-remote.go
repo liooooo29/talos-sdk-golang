@@ -6,7 +6,7 @@ package main
 import (
 	"flag"
 	"fmt"
-	"github.com/XiaoMi/talos-sdk-golang/thrift/thrift"
+	"github.com/liooooo29/talos-sdk-golang/thrift/thrift"
 	"math"
 	"net"
 	"net/url"

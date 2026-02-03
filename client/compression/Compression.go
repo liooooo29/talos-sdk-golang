@@ -12,9 +12,9 @@ import (
 	"fmt"
 	"io/ioutil"
 
-	"github.com/XiaoMi/talos-sdk-golang/client/serialization"
-	"github.com/XiaoMi/talos-sdk-golang/thrift/message"
-	"github.com/XiaoMi/talos-sdk-golang/utils"
+	"github.com/liooooo29/talos-sdk-golang/client/serialization"
+	"github.com/liooooo29/talos-sdk-golang/thrift/message"
+	"github.com/liooooo29/talos-sdk-golang/utils"
 
 	"github.com/DataDog/zstd"
 	"github.com/bkaradzic/go-lz4"
