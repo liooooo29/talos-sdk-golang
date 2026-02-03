@@ -9,15 +9,17 @@ package admin
 import (
 	"strings"
 
-	"github.com/XiaoMi/talos-sdk-golang/client"
-	"github.com/XiaoMi/talos-sdk-golang/thrift/auth"
-	"github.com/XiaoMi/talos-sdk-golang/thrift/consumer"
-	"github.com/XiaoMi/talos-sdk-golang/thrift/message"
-	"github.com/XiaoMi/talos-sdk-golang/thrift/metric"
-	"github.com/XiaoMi/talos-sdk-golang/thrift/quota"
-	"github.com/XiaoMi/talos-sdk-golang/thrift/topic"
-	"github.com/XiaoMi/talos-sdk-golang/utils"
+	"github.com/liooooo29/talos-sdk-golang/client"
+	"github.com/liooooo29/talos-sdk-golang/thrift/auth"
+	"github.com/liooooo29/talos-sdk-golang/thrift/consumer"
+	"github.com/liooooo29/talos-sdk-golang/thrift/message"
+	"github.com/liooooo29/talos-sdk-golang/thrift/metric"
+	"github.com/liooooo29/talos-sdk-golang/thrift/quota"
+	"github.com/liooooo29/talos-sdk-golang/thrift/topic"
+	"github.com/liooooo29/talos-sdk-golang/utils"
 )
+
+var _ Admin = (*TalosAdmin)(nil)
 
 type TalosAdmin struct {
 	topicClient    topic.TopicService
@@ -245,4 +247,8 @@ func (a *TalosAdmin) GetWorkerId(request *consumer.GetWorkerIdRequest) (string, 
 func (a *TalosAdmin) GetDescribeInfo(request *topic.GetDescribeInfoRequest) (
 	*topic.GetDescribeInfoResponse, error) {
 	return a.topicClient.GetDescribeInfo(request)
+}
+
+func (a *TalosAdmin) ChangeTopicOwnerInfo(request *topic.ChangeTopicOwnerInfoRequest) error {
+	return a.topicClient.ChangeTopicOwnerInfo(request)
 }

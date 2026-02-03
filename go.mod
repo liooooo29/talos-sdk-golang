@@ -1,4 +1,4 @@
-module github.com/XiaoMi/talos-sdk-golang
+module github.com/liooooo29/talos-sdk-golang
 
 go 1.14
 
