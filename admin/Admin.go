@@ -45,4 +45,5 @@ type Admin interface {
 	AddSubResourceName(request *topic.AddSubResourceNameRequest) error
 	GetOrgOffsetMap(request *consumer.QueryOrgOffsetRequest) (*consumer.QueryOrgOffsetResponse, error)
 	GetWorkerId(request *consumer.GetWorkerIdRequest) (string, error)
+	ChangeTopicOwnerInfo(request *topic.ChangeTopicOwnerInfoRequest) error
 }

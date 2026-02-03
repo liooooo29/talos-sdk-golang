@@ -246,3 +246,7 @@ func (a *TalosAdmin) GetDescribeInfo(request *topic.GetDescribeInfoRequest) (
 	*topic.GetDescribeInfoResponse, error) {
 	return a.topicClient.GetDescribeInfo(request)
 }
+
+func (a *TalosAdmin) ChangeTopicOwnerInfo(request *topic.ChangeTopicOwnerInfoRequest) error {
+	return a.topicClient.ChangeTopicOwnerInfo(request)
+}
